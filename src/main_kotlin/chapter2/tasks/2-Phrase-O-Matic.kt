@@ -26,6 +26,8 @@ fun main() {
 //    val rand2 = Random.nextInt(arraySize2)
 //    val rand3 = Random.nextInt(arraySize3)
 
+
+    // Math.random() -> returns a randomly generated number between 0 and 1
     // Head First Kotlin SOLUTION
     val rand1 = (Math.random() * arraySize1).toInt()
     val rand2 = (Math.random() * arraySize2).toInt()
@@ -48,4 +50,4 @@ fun main() {
     println(pick3 + pick1)
 
 
-}
+} // fun main
