@@ -1,9 +1,11 @@
 package main_kotlin.chapter2.tasks
 
+// commenting out the NOT WORKING CODE
+
 fun main() {
 
     // declaring a Int but initializing a float - not working ❌
-    var x : Int = 65.2
+//    var x : Int = 65.2
 
     // boolean - is working
     var isPunk = true
@@ -33,16 +35,16 @@ fun main() {
     var smallNum = b.toShort()
 
     // initializing a Byte to Short - not working ❌
-    b = smallNum
+//    b = smallNum
 
     // initializing a String to Boolean - not working ❌
-    isPunk = "false"
+//    isPunk = "false"
 
     // converting an Int into Double - is working
     var k = y.toDouble()
 
-    // converting a Double into Byte - not working
-    b = k.toByte()
+    // converting a Double into Byte - not working ❌
+//    b = k.toByte()
     // converting a Double into a Int then to Byte - is working (Down-Casting)
     b = k.toInt().toByte()
 
