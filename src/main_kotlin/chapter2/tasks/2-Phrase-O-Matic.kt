@@ -22,9 +22,9 @@ fun main() {
 
     // MY SOLUTION
     // getting a random number from 0 to arraySize
-    val rand1 = Random.nextInt(arraySize1)
-    val rand2 = Random.nextInt(arraySize2)
-    val rand3 = Random.nextInt(arraySize3)
+//    val rand1 = Random.nextInt(arraySize1)
+//    val rand2 = Random.nextInt(arraySize2)
+//    val rand3 = Random.nextInt(arraySize3)
 
 
     // Math.random() -> returns a randomly generated number between 0 and 1
