@@ -1,6 +1,9 @@
 import kotlin.random.Random
 
 // generating random numbers in fun main
+    // function uses parameters, and caller passes arguments
+    // calling a two-parameter function maxValue(x_param, y_param)
+        // and sending it two arguments x = random Num , y = ...
 // Numbers are passed to the function maxValue() with two parameters
 // maxValue evaluates which of the values of x and y is bigger
 // and prints out the max value statement
@@ -16,6 +19,7 @@ fun main() {
 
 
 }
+
 
 
 fun maxValue(x_param : Int, y_param: Int) {
