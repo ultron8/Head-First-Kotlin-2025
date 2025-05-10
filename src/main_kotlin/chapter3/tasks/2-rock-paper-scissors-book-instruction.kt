@@ -20,11 +20,9 @@ fun main() {
 
 fun getGameChoice(options_param: Array<String>): String {
 
-
-
     // which will choose "Rock", "Scissors", "Paper" at random
     var symbol = options_param[(Math.random() * options_param.size).toInt()]
-    return "This is the game choice symbol: $symbol"
+    return " $symbol"
 
 } // getGameChoice()
 
@@ -44,6 +42,7 @@ fun getUserChoice(options_param: Array<String>): String {
         println(".")
         // read the user input
         val userInput = readLine()
+
         // validate the user input (not null & is in options_param)
         if (userInput != null && userInput in options_param) {
             //
@@ -62,12 +61,15 @@ fun getUserChoice(options_param: Array<String>): String {
 } // getUserChoice()
 
 
+// IRGENDWAS IST AN DER LOGIK DES CODES FALSCH - bekommen ständig you lose!
 // the logic of the game
 fun printResult(userChoice: String, gameChoice: String) {
     val result: String
 
     // Figure out the result
-    if(userChoice == gameChoice) result = "Tie!"
+    if (userChoice == gameChoice) {
+        result = "Tie!"
+    }
     // S kills P
     // R kills S
     // P kills R
@@ -75,8 +77,12 @@ fun printResult(userChoice: String, gameChoice: String) {
         (userChoice == "Scissors" && gameChoice == "Paper") ||
         (userChoice == "Rock" && gameChoice == "Scissors") ||
         (userChoice == "Paper" && gameChoice == "Rock")
-        ) result = "You win!"
-    else result = "You lose!"
+        ) {
+        result = "You win!"
+    } // else if
+    else {
+        result = "You lose!"
+    }
     // print the result
     println("USER chose: $userChoice. GAME chose: $gameChoice. $result ")
 } // fun printResult
