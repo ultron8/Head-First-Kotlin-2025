@@ -4,16 +4,18 @@ package main_kotlin.chapter3.`function-tasks`.`2-medium`
 //Description:
 //Write a function countVowels that counts how many vowels
 // (a, e, i, o, u) are in a given string. Return the count as an Int.
+// additional:
+    // add uppercase()
 
 fun main(){
 
     println("What is the word to check?\n")
     var userInput = readLine()
-    userInput = userInput.toString()
+    userInput = userInput.toString().lowercase()
 
     val countVowels = countVowels(userInput)
 
-    println("The str ultron contains $countVowels vowels")
+    println("The str $userInput contains $countVowels vowels")
 
 }
 
