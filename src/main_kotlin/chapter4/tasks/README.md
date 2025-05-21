@@ -9,3 +9,4 @@
 - getters and setters
 - protect properties
 - data hiding
+- test
