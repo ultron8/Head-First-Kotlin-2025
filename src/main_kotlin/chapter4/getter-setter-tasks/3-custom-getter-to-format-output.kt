@@ -8,12 +8,18 @@
 
 fun main(){
 
+    var createTitle = Book("Ultron will conquer the world")
+    println("The title of the WSJ is: ${createTitle.title}")
+    println("The title of the WSJ is: ${createTitle.title_param}")
 
-}
+} // fun main
 
-class Book() {
-    var title: String
+// Could use private val title_param: String
+// Then 'title_param' is not accessible: it is private in 'Book'
+class Book(val title_param: String) {
+
+    val title : String
         get() {
-
-        }
-}
+            return title_param.uppercase()
+        } // getter
+} // class Book
