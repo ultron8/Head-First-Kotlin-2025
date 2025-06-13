@@ -19,6 +19,8 @@ fun main() {
     // obj of Distance
     var distance = Distance(1230.23)
 
+    // cause distance.meters is private I don't have access to it
+        // reverse thinking it distance.inKilometers*1000 is the same as the variable meters
     println("${distance.inKilometers*1000} meters in km are: ${distance.inKilometers} km")
 
 } // main
