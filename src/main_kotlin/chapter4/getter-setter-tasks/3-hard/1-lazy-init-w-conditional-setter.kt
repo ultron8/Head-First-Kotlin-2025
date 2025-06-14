@@ -6,6 +6,7 @@
 *   Example: If settings is accessed before being set, it initializes with default values. Once set explicitly, further attempts to overwrite it should be ignored.
 * */
 
+// COMMMENT: still to hard to do by my own
 
 class Configuration(){
 
