@@ -7,13 +7,16 @@
 *
 * */
 
+// Now I solved the main task by my own but needed some recommendation by the LLM
+    // just some points on encapsulation
+
 fun main() {
 
     // obj of UserAccount
     var userAcc = UserAccount("@vtgj")
 
     val maskedPw = userAcc.password
-    println("This is your masked password: $maskedPw and length is ${maskedPw.length}")
+    println("This is your masked password: $maskedPw and the length is ${maskedPw.length}")
 
 } // main
 
@@ -28,6 +31,7 @@ class UserAccount(private var _password: String){
         }
         return strAsterikLength
     } // fun repeat
+
 
     var password: String = _password
         get() {
