@@ -4,9 +4,10 @@
 
 fun main() {
 
-    val animals = arrayOf(
+    val animals = arrayOf (
         Hippo(),
         Wolf()
+
     ) // animal
 
     for (i in animals) {
