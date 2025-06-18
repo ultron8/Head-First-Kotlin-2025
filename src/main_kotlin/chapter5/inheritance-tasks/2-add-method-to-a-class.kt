@@ -27,6 +27,6 @@ class Circle(var radius: Double) {
     fun getArea(): Double {
         val a = 3.14 * radius.pow(2)
         return a
-    }
+    } // fun getArea()
 
 } // class Circle
