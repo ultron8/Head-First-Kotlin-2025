@@ -9,12 +9,12 @@
 
 fun main() {
 
-    val testAbsoluteZero = Temperature(-274.16)
+    val testAbsoluteZero = Temperaturee(-274.16)
     println("What is the temperature? \n${testAbsoluteZero.celsius}")
 
 }
 
-class Temperature(_celsius : Double) {
+class Temperaturee(_celsius : Double) {
     var celsius: Double = 0.0
         set(value) {
             if (value < -273.15) {
