@@ -46,15 +46,27 @@ class Studentt(var name: String, var grades: MutableList<Int>) {
 
     // averageGrade(): Double
     fun averageGrade(): Double {
-        var sum = 0.0
-        var avg = 0.0
-        for (i in grades) {
-            var amountOfGrades = grades.size.toDouble()
-            sum = sum + i.toDouble()
-            avg = sum / amountOfGrades
 
-        } // for loop
-        return avg
+        // LLM recommendation
+        if (grades.isEmpty()) {
+            return 0.0
+        }
+        var sum = 0.0
+        for (i in grades) {
+            sum += i
+        }
+        return sum / grades.size
+
+        // my solution
+//        var sum = 0.0
+//        var avg = 0.0
+//        for (i in grades) {
+//            var amountOfGrades = grades.size.toDouble()
+//            sum = sum + i.toDouble()
+//            avg = sum / amountOfGrades
+//
+//        } // for loop
+//        return avg
 
     } //fun averageGrade
 } // class Student
