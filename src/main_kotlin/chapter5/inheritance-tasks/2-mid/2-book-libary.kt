@@ -18,19 +18,19 @@ availableBooks(): List<Book>
 fun main() {
 
     // obj's of Book (which are available)
-    val book1 = Book("Slow and Fast Thinking", "Daniel Kahnemann", false)
-    val book2 = Book("Harry Potter", "JK Rowling", false)
-    val book3 = Book("Dataismus", "Yuval Harari", false)
+    val book1 = Bookk("Slow and Fast Thinking", "Daniel Kahnemann", false)
+    val book2 = Bookk("Harry Potter", "JK Rowling", false)
+    val book3 = Bookk("Dataismus", "Yuval Harari", false)
     // checking out some books
-    val book4 = Book("Liars Poker", "Michael Lewis", true)
-    val book5 = Book("Hooked", "Nir Eyal", true)
-    val book6 = Book("Lean Analytics", "Alistair Croll", true)
+    val book4 = Bookk("Liars Poker", "Michael Lewis", true)
+    val book5 = Bookk("Hooked", "Nir Eyal", true)
+    val book6 = Bookk("Lean Analytics", "Alistair Croll", true)
 
     // list of 3 books from above
-    var booksList = mutableListOf(book1, book2, book3, book4, book5, book6)
+    val booksList = mutableListOf(book1, book2, book3, book4, book5, book6)
 
     // obj of library with 3 books in the property manageBooks
-    var library = Library(booksList)
+    val library = Libraryy(booksList)
 
     // general output of the list of books
     println("The library already has following books: ${booksList}")
@@ -46,7 +46,7 @@ fun main() {
 
 } // main
 
-class Book(var title: String, var author: String, var isCheckedOut: Boolean) {
+class Bookk(var title: String, var author: String, var isCheckedOut: Boolean) {
 
     override fun toString(): String {
         return "'$title' by $author${if (isCheckedOut) " (Checked Out)" else ""}\n"
@@ -54,17 +54,17 @@ class Book(var title: String, var author: String, var isCheckedOut: Boolean) {
 
 } // class Book
 
-class Library(var manageBooks: MutableList<Book>) {
+class Libraryy(var manageBooks: MutableList<Bookk>) {
 
     // addBook to List
-    fun addBook(book: Book){
+    fun addBook(book: Bookk){
         manageBooks.add((book))
 
     } // addBook
 
-    var checkedOutBooks: MutableList<Book> = mutableListOf()
+    var checkedOutBooks: MutableList<Bookk> = mutableListOf()
     // check if books are checked-out (so !available)
-    fun checkoutBook(): List<Book> {
+    fun checkoutBook(): List<Bookk> {
         for (i in manageBooks) {
             if (i.isCheckedOut == true) {
                 checkedOutBooks.add(i)
@@ -74,9 +74,9 @@ class Library(var manageBooks: MutableList<Book>) {
     } // checkoutBook
 
 
-    var available: MutableList<Book> = mutableListOf()
+    var available: MutableList<Bookk> = mutableListOf()
     // check if books are !checkedBook's (so available
-    fun availableBooks(): List<Book> {
+    fun availableBooks(): List<Bookk> {
         for (i in manageBooks) {
             if (!i.isCheckedOut) {
                 available.add(i)
