@@ -1,11 +1,8 @@
-/*
-* Task 1: Basic Inheritance
-* Description:
-* Create a base class Machine with a property name.
-* Create a subclass Car that inherits from Machine
-* and adds a property numberOfDoors.
-* Create an object of Auto and print all properties.
-*
+/**
+ * Task 2: Method Overriding
+ * Description:
+ * Create an Animal class with a function makeSound() that prints a generic sound. Create a subclass Dog that overrides makeSound() to print "Bark!".
+ * Call the function for both Animal and Dog objects.
 * */
 
 fun main() {
