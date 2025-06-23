@@ -4,6 +4,13 @@
 
 fun main() {
 
+    val roamables = arrayOf(
+        Hippo(), Wolf(), Vehicle()
+    )
+    for (i in roamables) {
+        i.roam()
+    }
+
     val animals = arrayOf (
         Hippo(),
         Wolf()
