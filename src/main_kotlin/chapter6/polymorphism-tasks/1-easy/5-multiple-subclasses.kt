@@ -11,30 +11,19 @@
 
 
 fun main() {
-
-
-
     val employees = mutableListOf(Manager("Paul"), Intern("Luca"))
-
     for (employee in employees) {
         employee.work()
-    }
-
+    } //
 
 } // main
 
 abstract class Staff(open var name: String) {
-
-
     abstract fun work()
 
 } // class Staff()
 
 class Manager(override var name: String): Staff(name) {
-
-
-
-
     override fun work() {
         println("$name the manager is managing the employees of the company.")
     }
@@ -42,10 +31,6 @@ class Manager(override var name: String): Staff(name) {
 } // sub-class Manager()
 
 class Intern(override var name: String): Staff(name) {
-
-
-
-
     override fun work() {
         println("$name the intern is helping out the manager in the company to get experience.")
     }
