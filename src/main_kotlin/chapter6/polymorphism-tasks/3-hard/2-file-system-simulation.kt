@@ -10,7 +10,7 @@
  */
 
 
-// COMMENT: Need to fix some points
+// COMMENT: Need more advanced programming concepts to solve this task ❗️
 /**
  * What you did well:
  * You have an abstract class FileSystemItem and subclasses File and Directory.
@@ -48,85 +48,86 @@
  *
  */
 
-fun main() {
-
-    // file obj's
-    var file1 = File("photo", ".jpg")
-    var file2 = File("video", ".mp4")
-    var file3 = File("ba-thesis", ".docx")
-    var file4 = File("randomGIF", ".gif")
-    var file5 = File("the weeknd - timeless", ".mp3")
-    var file6 = File("charles aznavour ", ".mp3")
-
-    // list
-//    var filesList = mutableListOf(file1, file2, file3, file4, file5, file6)
-    var directory = Directory()
-
-    // adding files to the directory
-    directory.addFiles(file1)
-    directory.addFiles(file2)
-    directory.addFiles(file3)
-    directory.addFiles(file4)
-    directory.addFiles(file5)
-    directory.addFiles(file6)
-
-    // size of the directory
-    println("The storage size is: ${directory.getSize()} \n")
-
-    // print the structure of the storage
-    directory.printStructure()
-
-    // searching the directory
-    directory.search("video")
-
-
-} // main
-
-abstract class FileSystemItem() // super-class FileSystemItem
-
-class File(var fileName: String, var fileFormat: String): FileSystemItem()
-
-
-class Directory(): FileSystemItem() {
-
-    var storage: MutableList<File> = mutableListOf()
-
-    fun addFiles(file: File) {
-        storage.add(file)
-    } //
-
-    // getSize()
-    fun getSize(): Int {
-        return storage.size
-    }
-
-    // printStructure()
-    fun printStructure() {
-        println("\nthe storage:")
-        for (i in storage) {
-            println("${i.fileName} | ${i.fileFormat} |")
-        } // for
-        println("\n")
-
-
-    } // fun printStructure()
-
-    fun search(name: String) {
-        println("the SEARCH request: ")
-        for (i in storage) {
-            if (i.fileName == name) {
-                println("✅ Found: ${ i.fileName } - it is in the directory")
-            } //
-            else {
-                println("❌ Sry, there is not such a name: $name in the directory")
-            } // if
-        } // for loop
-        // create a print statement independent from the for loop
-
-    } // fun search
 
 
 
-
-} // class Directory
+// Iteration 1
+//fun main() {
+//
+//    // file obj's
+//    var file1 = File("photo", ".jpg")
+//    var file2 = File("video", ".mp4")
+//    var file3 = File("ba-thesis", ".docx")
+//    var file4 = File("randomGIF", ".gif")
+//    var file5 = File("the weeknd - timeless", ".mp3")
+//    var file6 = File("charles aznavour ", ".mp3")
+//
+//    // list
+////    var filesList = mutableListOf(file1, file2, file3, file4, file5, file6)
+//    var directory = Directory()
+//
+//    // adding files to the directory
+//    directory.addFiles(file1)
+//    directory.addFiles(file2)
+//    directory.addFiles(file3)
+//    directory.addFiles(file4)
+//    directory.addFiles(file5)
+//    directory.addFiles(file6)
+//
+//    // size of the directory
+//    println("The storage size is: ${directory.getSize()} \n")
+//
+//    // print the structure of the storage
+//    directory.printStructure()
+//
+//    // searching the directory
+//    directory.search("video")
+//
+//
+//} // main
+//
+//abstract class FileSystemItem() // super-class FileSystemItem
+//
+//class File(var fileName: String, var fileFormat: String): FileSystemItem()
+//
+//
+//class Directory(): FileSystemItem() {
+//
+//    var storage: MutableList<File> = mutableListOf()
+//
+//    fun addFiles(file: File) {
+//        storage.add(file)
+//    } //
+//
+//    // getSize()
+//    fun getSize(): Int {
+//        return storage.size
+//    }
+//
+//    // printStructure()
+//    fun printStructure() {
+//        println("\nthe storage:")
+//        for (i in storage) {
+//            println("${i.fileName} | ${i.fileFormat} |")
+//        } // for
+//        println("\n")
+//
+//
+//    } // fun printStructure()
+//
+//    fun search(name: String) {
+//        println("the SEARCH request: ")
+//        for (i in storage) {
+//            if (i.fileName == name) {
+//                println("✅ Found: ${ i.fileName } - it is in the directory")
+//            } //
+//            else {
+//                println("❌ Sry, there is not such a name: $name in the directory")
+//            } // if
+//        } // for loop
+//        // create a print statement independent from the for loop
+//
+//    } // fun search
+//
+//} // class Directory
 
