@@ -19,9 +19,9 @@ fun main() {
     var ft2 = FullTimeEmployee("Andressen Horrowitz", 7456.34, 634567.43)
     var ft3 = FullTimeEmployee("Bryon Trott", 2348.34, 3457.43)
     var ft4 = FullTimeEmployee("Lazy D", 2482.69, 0.0)
-    var pt1 = PartTimeEmployee("Peter Thiel", 0.0, 22)
-    var pt2 = PartTimeEmployee("Alexander Karp", 0.0, 11)
-    var pt3 = PartTimeEmployee("Warren Buffett", 0.0, 14)
+    var pt1 = PartTimeEmployee("Peter Thiel", 22, 15.34)
+    var pt2 = PartTimeEmployee("Alexander Karp", 11, 20.34)
+    var pt3 = PartTimeEmployee("Warren Buffett", 14, 42.42)
 
     var personnel: MutableList<Personnel> = mutableListOf(
         ft1,
@@ -45,14 +45,14 @@ fun main() {
 
 } // main
 
-abstract class Personnel(){
-        abstract var name: String
-        abstract var baseSalary: Double
+abstract class Personnel(open var name: String, open var baseSalary: Double){
+
+
 
         abstract fun calculateMonthlySalary(): Double
 } // superclass Personnel
 
-class FullTimeEmployee(override var name: String, override var baseSalary: Double, var bonus: Double): Personnel() {
+class FullTimeEmployee(override var name: String, override var baseSalary: Double, var bonus: Double): Personnel(name, baseSalary) {
 
 
 
@@ -64,10 +64,10 @@ class FullTimeEmployee(override var name: String, override var baseSalary: Doubl
 
 } // FT
 
-class PartTimeEmployee(override var name: String, override var baseSalary: Double, var hours: Int): Personnel() {
+class PartTimeEmployee(override var name: String, var hours: Int, val hourlyRate: Double): Personnel(name, 0.0) {
 
     override fun calculateMonthlySalary(): Double {
-        baseSalary = hours * 15.0
+        baseSalary = hours * hourlyRate
         return baseSalary
     }
 
