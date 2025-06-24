@@ -29,6 +29,7 @@ fun userNameValidation(usernames: MutableList<String>) {
         } else {
             println("❌ $i is too short")
         } // if
+
     } // for
 
 
