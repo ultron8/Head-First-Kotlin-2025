@@ -17,14 +17,14 @@ fun main() {
 
     var names = mutableListOf("Paul", "Yashar", "Timo", "Jesaja", "Warrem", "Moritz", "Carlo", "Ultron", "Plusquamperfekt", "Lamine Yamal", "Enes", "Luci")
 
-    userValidation(names)
+    userNameValidation(names)
 
 } // main
 
-fun userValidation(username: MutableList<String>) {
+fun userNameValidation(usernames: MutableList<String>) {
 
-    for (i in username) {
-        if (i.length > 4) {
+    for (i in usernames) {
+        if (i.length >= 5) {
             println("✅ $i is valid")
         } else {
             println("❌ $i is too short")
