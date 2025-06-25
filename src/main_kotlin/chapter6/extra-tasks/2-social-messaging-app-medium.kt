@@ -24,9 +24,9 @@ fun main() {
 
     // create more messages
     val msg1 = Message("Paul", "Moritz", "Hi Moritz, whats up ?")
-    var msg2 = Message("Moritz", "Paul", "Hi Paul, nice to hearing from you. Im good, what about you?")
-    var msg3 = Message("Paul", "Moritz", "Thanks Im all good. So, what poppin with your startup?")
-    var msg4 = Message("Moritz", "Paul", "You don't will believe it! We got into YC 🟠!")
+    val msg2 = Message("Moritz", "Paul", "Hi Paul, nice to hearing from you. Im good, what about you?")
+    val msg3 = Message("Paul", "Moritz", "Thanks Im all good. So, what poppin with your startup?")
+    val msg4 = Message("Moritz", "Paul", "You don't will believe it! We got into YC 🟠!")
 
     // messageList
     var messageList: MutableList<Message> = mutableListOf(msg1, msg2, msg3, msg4)
@@ -51,7 +51,7 @@ fun messageListFunction(messageList: MutableList<Message>) {
         } // for
     } // fun printAllMessagesOf
 
-    printAllMessagesOf("Paul")
+    printAllMessagesOf("Moritz")
 
 } // fun messageListFun
 
