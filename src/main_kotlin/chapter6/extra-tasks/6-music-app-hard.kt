@@ -38,7 +38,7 @@ fun main() {
 fun printLongTracks(playlistItems: List<PlaylistItem>) {
 
     for (i in playlistItems) {
-        if (i is Track) {
+        if (i is Track) { // this logic was a learnable experience
             if (i.duration > 300) {
                 println("LONG:\t${i.title} by ${i.artist} is a Long Track (${i.duration}) seconds")
             } // if
